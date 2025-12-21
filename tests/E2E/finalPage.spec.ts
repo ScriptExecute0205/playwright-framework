@@ -29,7 +29,7 @@ test.describe("Final Page Validation", () => {
 
         await page.goto(BASE_URL);
         await loginPage.login(USERNAME, PASSWORD);
-        await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+        await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html/EngineerB");
         await productPage.getSpecificProductDetails(productsToCart);
         await productPage.clickOnCartLink();
         await cartPage.clickCheckoutButton();
