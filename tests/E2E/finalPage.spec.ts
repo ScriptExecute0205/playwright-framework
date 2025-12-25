@@ -40,7 +40,7 @@ test.describe("Final Page Validation", () => {
         await checkoutOverview.clickOnFinish();
     })
 
-    test("Validate checkout overview page UI and url", async({page})=>
+    test(" e2e Validate checkout overview page UI and url", async({page})=>
 {
   await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html")
   const elements = await finalPage.getFinalPageElements();
@@ -49,32 +49,32 @@ test.describe("Final Page Validation", () => {
  await expect(elements.pageInfo).toBeVisible()
 })
 
-test.only("Validate the Success Message", async({page})=>
+test("e2e Validate the Success Message", async({page})=>
 {
     const message = await finalPage.getSuccessMsgText();
      expect(message).toBe("Thank you for your order!")
 })
-test ("Validate BackHomeButton", async({page})=>
+test ("e2e  Validate BackHomeButton", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
-test ("Validate BackHomeButton 1", async({page})=>
+test ("e2e Validate BackHomeButton 1", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
-test ("Validate BackHomeButton 2", async({page})=>
+test (" e2e Validate BackHomeButton 2", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
-test ("Validate BackHomeButton 4", async({page})=>
+test ("e2e Validate BackHomeButton 4", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
-test ("Validate BackHomeButton 1", async({page})=>
+test ("e2e Validate BackHomeButton 1", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
