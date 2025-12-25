@@ -11,7 +11,7 @@ import { CheckoutOverviewPage } from '../../pages/CheckoutOverviewPage'
 import { FinalPage } from '../../pages/FinalPage'
 
 
-test.describe("Final Page Validation", () => {
+test.describe("E2E End Page Validation", () => {
     let loginPage: LoginPage
     let productPage: ProductPage
     let cartPage : CartPage
@@ -29,7 +29,9 @@ test.describe("Final Page Validation", () => {
 
         await page.goto(BASE_URL);
         await loginPage.login(USERNAME, PASSWORD);
+
         await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html");
+
         await productPage.getSpecificProductDetails(productsToCart);
         await productPage.clickOnCartLink();
         await cartPage.clickCheckoutButton();
@@ -38,7 +40,7 @@ test.describe("Final Page Validation", () => {
         await checkoutOverview.clickOnFinish();
     })
 
-    test("smoke Validate checkout overview page UI and url", async({page})=>
+    test("Validate checkout overview page UI and url", async({page})=>
 {
   await expect(page).toHaveURL("https://www.saucedemo.com/checkout-complete.html")
   const elements = await finalPage.getFinalPageElements();
@@ -47,14 +49,35 @@ test.describe("Final Page Validation", () => {
  await expect(elements.pageInfo).toBeVisible()
 })
 
-test("smo Validate the Success Message", async({page})=>
+test("Validate the Success Message", async({page})=>
 {
     const message = await finalPage.getSuccessMsgText();
      expect(message).toBe("Thank you for your order!")
 })
-test ("smoke Validate BackHomeButton", async({page})=>
+test ("Validate BackHomeButton", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
+test ("Validate BackHomeButton 1", async({page})=>
+{
+    await finalPage.clickOnBackHomeBtn();
+    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
+})
+test ("Validate BackHomeButton 2", async({page})=>
+{
+    await finalPage.clickOnBackHomeBtn();
+    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
+})
+test ("Validate BackHomeButton 4", async({page})=>
+{
+    await finalPage.clickOnBackHomeBtn();
+    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
+})
+test ("End to Test Validate BackHomeButton 1", async({page})=>
+{
+    await finalPage.clickOnBackHomeBtn();
+    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
+})
+
 })
