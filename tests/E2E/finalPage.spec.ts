@@ -47,7 +47,7 @@ test.describe("Final Page Validation", () => {
  await expect(elements.pageInfo).toBeVisible()
 })
 
-test.only("Validate the Success Message", async({page})=>
+test("Validate the Success Message", async({page})=>
 {
     const message = await finalPage.getSuccessMsgText();
      expect(message).toBe("Thank you for your order!")
@@ -72,7 +72,7 @@ test ("Validate BackHomeButton 4", async({page})=>
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
-test ("Validate BackHomeButton 1", async({page})=>
+test ("Validate BackHomeButton 3", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
