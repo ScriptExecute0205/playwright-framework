@@ -11,7 +11,7 @@ import { CheckoutOverviewPage } from '../../pages/CheckoutOverviewPage'
 import { FinalPage } from '../../pages/FinalPage'
 
 
-test.describe("Final Page Validation", () => {
+test.describe("E2E End Page Validation", () => {
     let loginPage: LoginPage
     let productPage: ProductPage
     let cartPage : CartPage
@@ -74,7 +74,7 @@ test ("Validate BackHomeButton 4", async({page})=>
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
-test ("Validate BackHomeButton 1", async({page})=>
+test ("End to Test Validate BackHomeButton 1", async({page})=>
 {
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
