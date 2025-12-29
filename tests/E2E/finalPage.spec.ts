@@ -79,5 +79,14 @@ test ("e2e Validate BackHomeButton 2", async({page})=>
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
-
+test ("Test Case 1", async({page})=>
+{
+    await finalPage.clickOnBackHomeBtn();
+    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
+})
+test ("Test Case 2", async({page})=>
+{
+    await finalPage.clickOnBackHomeBtn();
+    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
+})
 })
