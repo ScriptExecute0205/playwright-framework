@@ -47,7 +47,7 @@ test.describe("Final Page Validation", () => {
  await expect(elements.pageInfo).toBeVisible()
 })
 
-test.only("Validate the Success Message", async({page})=>
+test("Validate the Success Message", async({page})=>
 {
     const message = await finalPage.getSuccessMsgText();
      expect(message).toBe("Thank you for your order!")

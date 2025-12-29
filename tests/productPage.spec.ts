@@ -55,13 +55,13 @@ test.describe("Product Page Validation", () => {
         const sorted = [...names].sort().reverse();
               expect(names).toEqual(sorted);
     })
-    test.only('Filter By Price Low to High', async () => {
+    test('Filter By Price Low to High', async () => {
 await productPage.filterByPriceLowToHigh();
 const prices = await productPage.getProductPrices()
 const sortedPrice =[...prices].sort((a,b) => a-b)
 expect(prices).toEqual(sortedPrice)
     })
-    test.only('Filter By Price High to Low', async () => {
+    test('Filter By Price High to Low', async () => {
 await productPage.filterByPriceHighToLow()
 const prices = await productPage.getProductPrices()
 const sortedPrice =[...prices].sort((a,b) => b-a)

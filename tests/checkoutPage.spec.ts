@@ -48,7 +48,7 @@ test.describe("Cart Page Validation", () => {
         await checkoutPage.fillCheckoutDetail(checckoutData.firstName, checckoutData.lastName, checckoutData.postalCode);
         await checkoutPage.clickOnContinue(); 
     })
-    test.only("Validate the error when clicking on continue with no data", async({page})=>
+    test("Validate the error when clicking on continue with no data", async({page})=>
     {
           await cartPage.clickCheckoutButton();
           await checkoutPage.clickOnContinue();
