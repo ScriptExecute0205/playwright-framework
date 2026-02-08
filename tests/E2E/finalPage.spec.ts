@@ -94,4 +94,9 @@ test ("Test Case 21", async({page})=>
     await finalPage.clickOnBackHomeBtn();
     await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
 })
+test ("Test Case 22", async({page})=>
+{
+    await finalPage.clickOnBackHomeBtn();
+    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html")
+})
 })
